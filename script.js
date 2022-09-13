@@ -14,8 +14,13 @@ function createSquares(squares) {
     div.style.height = `${700 / squares}px`;
     console.log(div.style.width, div.style.height);
     container.append(div);
+    div.addEventListener("mouseover", function () {
+      div.style.backgroundColor = "#333";
+    });
     // console.log(container.childNodes);
   }
 }
 
 createSquares(squares);
+
+// Create hover effect by event listener
