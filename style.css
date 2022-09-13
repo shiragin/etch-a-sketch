@@ -35,6 +35,32 @@
   width: 100%;
   height: 300px;
   border: 1px #333 solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 40px;
+}
+
+.control-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.control-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.control-choice {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #ccc;
+  padding: 5px 10px;
+  margin-top: 5px;
+  border: 0.5px #999 solid;
 }
 
 .colour {

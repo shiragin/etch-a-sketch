@@ -3,7 +3,7 @@
 // Variables
 const container = document.querySelector(".container");
 
-let squares = 32;
+let squares = 16;
 
 // Creating divs inside the container box
 function createSquares(squares) {
@@ -17,7 +17,6 @@ function createSquares(squares) {
     div.addEventListener("mouseover", function () {
       div.style.backgroundColor = "#333";
     });
-    // console.log(container.childNodes);
   }
 }
 
