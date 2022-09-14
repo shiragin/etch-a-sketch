@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Combo&family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Combo&family=Open+Sans:wght@300;400&family=Rubik+Moonrocks&display=swap");
 
 :root {
   --form-control-color: #32ac27;
@@ -25,7 +25,8 @@ body {
 }
 
 .title {
-  font-size: 40px;
+  font-family: "Rubik Moonrocks";
+  font-size: 60px;
   text-align: center;
   margin: 30px 0 30px;
   font-weight: 700;
@@ -192,6 +193,9 @@ Smartphones & small tablets */
     align-items: center;
     width: 100%;
   }
+  .title {
+    font-size: 40px;
+  }
 
   .container {
     width: 70%;
@@ -246,11 +250,13 @@ Smartphones & small tablets */
 
   .new-canvas {
     width: 15%;
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
     align-self: flex-start;
+    margin: 0;
+    padding: 0;
   }
 
   .new-canvas i {
@@ -262,25 +268,46 @@ Smartphones & small tablets */
 
 @media screen and (max-width: 480px) {
   .title {
-    font-size: 26px;
+    font-size: 22px;
   }
   .container {
     width: 300px;
   }
   .controls {
-    width: 250px;
-    justify-content: space-around;
+    width: 300px;
+    justify-content: space-between;
+    gap: 0;
   }
+
+  .radios {
+    gap: 0;
+  }
+
   .control-title {
-    font-size: 16px;
+    width: 50px;
+    margin-right: 5px;
   }
+
+  .colour form {
+    padding-left: 3px;
+  }
+
   .control-choice {
+    width: 50px;
     font-size: 10px;
   }
 
-  .colour .control-choice {
-    padding-left: 20px;
+  .size i,
+  .colour i {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
   }
+
+  .new-canvas i {
+    font-size: 40px;
+  }
+
   .btn-new {
     font-size: 16px;
     width: 80px;
