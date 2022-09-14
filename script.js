@@ -12,6 +12,7 @@ const btnNew = document.querySelector(".btn-new");
 
 const width = container.offsetWidth - 1;
 const height = container.offsetHeight - 1;
+
 let squares = 16;
 let colour = document.querySelector("input[name=ccolour]:checked").value;
 console.log(radioSize, radioColour, colour);

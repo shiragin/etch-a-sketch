@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Combo&family=Open+Sans:wght@300;400&display=swap");
 
 :root {
-  --form-control-color: #333;
+  --form-control-color: #3fd131;
 }
 
 *,
@@ -14,22 +14,14 @@
   font-family: "Open Sans", sans-serif;
 }
 
-/* .body {
-  width: 90vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-} */
-
 .title {
-  /* display: block; */
   font-size: 40px;
   text-align: center;
   margin: 30px 0 30px;
+  font-weight: 700;
 }
 
 .main {
-  /* height: 90vh; */
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -40,20 +32,21 @@
   box-sizing: content-box;
   width: 650px;
   height: 650px;
-  border: 0.5px #333 solid;
+  border: 0.5px #999 solid;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  box-shadow: 5px 5px #3fd131;
 }
 
 .square {
-  border: 0.5px #333 solid;
+  border: 0.5px #999 solid;
 }
 
 .controls {
-  width: 200px;
+  width: 160px;
   height: 650px;
   display: flex;
   flex-direction: column;
@@ -87,6 +80,7 @@
 .control-title {
   font-size: 26px;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .control-choice {
@@ -95,6 +89,7 @@
   display: grid;
   grid-template-columns: 1em auto;
   gap: 0.5em;
+  font-weight: 300;
 }
 
 /* Little radio buttons manipulation  */
@@ -140,20 +135,25 @@ input[type="radio"]:checked::before {
 } */
 
 .btn {
-  background-color: #ccc;
+  background-color: #3ed13145;
   padding: 5px 10px;
   margin-top: 5px;
   border: 0.5px #999 solid;
   cursor: pointer;
+  font-weight: 500;
+  /* transform: rotate(-10deg); */
 }
 
 .btn:hover {
-  background-color: #aaa;
+  /* background-color: #aaa; */
+  transition: 600ms ease-in-out;
+  transform: rotate(-360deg);
 }
 
 .btn-new {
   font-size: 20px;
   margin: 0;
+  width: 100px;
 }
 
 /* Media queries
