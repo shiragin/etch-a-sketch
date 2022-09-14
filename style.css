@@ -127,7 +127,7 @@ input[type="radio"]:checked::before {
   background-color: #aaa;
 }
 
-.btn-big {
+.btn-new {
   font-size: 24px;
   margin: 0;
 }

@@ -4,6 +4,7 @@
 const container = document.querySelector(".container");
 const btnSize = document.querySelector(".btn-size");
 const btnColour = document.querySelector(".btn-colour");
+const btnNew = document.querySelector(".btn-new");
 
 let squares = 16;
 let colour = "black";
@@ -34,6 +35,12 @@ createSquares(squares);
 btnSize.addEventListener("click", function (event) {
   event.preventDefault();
   squares = document.querySelector("input[name=csize]:checked").value;
+  clearSquares();
+  createSquares(squares);
+});
+
+// Reset the canvas
+btnNew.addEventListener("click", function () {
   clearSquares();
   createSquares(squares);
 });
