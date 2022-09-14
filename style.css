@@ -15,7 +15,6 @@
 
 body {
   background-color: #ddd;
-  /* background: url("img/steve-johnson-YS0YJLU_h2k-unsplash.jpeg"); */
   font-family: "Open Sans", sans-serif;
 }
 
@@ -86,7 +85,6 @@ body {
 .new-canvas {
   width: 100%;
   padding: 0 20px;
-  /* margin: 0 0 20px; */
   display: flex;
   justify-self: flex-end;
 }
@@ -97,9 +95,7 @@ body {
 }
 
 .control-title {
-  /* font-size: 26px; */
   margin-bottom: 10px;
-  /* font-weight: 500; */
 }
 
 .control-choice {
@@ -114,12 +110,9 @@ body {
 /* Little radio buttons manipulation  */
 
 input[type="radio"] {
-  /* Add if not using autoprefixer */
   -webkit-appearance: none;
   appearance: none;
-  /* For iOS < 15 to remove gradient background */
   background-color: #fff;
-  /* Not removed via appearance */
   margin: 0;
   font: inherit;
   color: currentColor;
@@ -140,7 +133,6 @@ input[type="radio"]::before {
   transform: scale(0);
   transition: 60ms transform ease-in-out;
   box-shadow: inset 1em 1em var(--form-control-color);
-  /* Windows High Contrast Mode */
   background-color: CanvasText;
 }
 
@@ -148,19 +140,11 @@ input[type="radio"]:checked::before {
   transform: scale(1);
 }
 
-/* input[type="radio"]:focus {
-  outline: max(2px, 0.15em) solid currentColor;
-  outline-offset: max(2px, 0.15em);
-} */
-
 .btn {
-  /* background-color: #3ed13145; */
   padding: 5px 10px;
   margin-top: 5px;
-  /* border: 0px #999 solid; */
   cursor: pointer;
   font-weight: 500;
-  /* transform: rotate(-10deg); */
 }
 
 .new-canvas:hover {
@@ -171,7 +155,6 @@ input[type="radio"]:checked::before {
 }
 
 .btn:hover {
-  /* background-color: #aaa; */
   transition: 200ms ease-in-out;
   transform: scale(1.2);
 }
@@ -259,13 +242,9 @@ Smartphones & small tablets */
     margin: 0;
     padding: 0;
   }
-
-  .new-canvas i {
-    /* align-self: flex-end;
-    justify-content: flex-end;
-    text-align: right; */
-  }
 }
+
+/* smartphones */
 
 @media screen and (max-width: 480px) {
   .title {
