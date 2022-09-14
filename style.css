@@ -31,7 +31,8 @@
   margin-right: 20px;
 }
 
-.size {
+.size,
+.colour {
   width: 100%;
   height: 300px;
   border: 1px #333 solid;
@@ -62,12 +63,6 @@
   margin-top: 5px;
   border: 0.5px #999 solid;
   cursor: pointer;
-}
-
-.colour {
-  width: 100%;
-  height: 300px;
-  border: 1px #333 solid;
 }
 
 .container {

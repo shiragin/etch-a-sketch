@@ -3,8 +3,10 @@
 // Variables
 const container = document.querySelector(".container");
 const btnSize = document.querySelector(".btn-size");
+const btnColour = document.querySelector(".btn-colour");
 
-// let squares = 16;
+let squares = 16;
+let colour = "black";
 
 // Creating divs inside the container box & hover effect
 function createSquares(squares) {
@@ -15,7 +17,7 @@ function createSquares(squares) {
     div.style.height = `${700 / squares}px`;
     container.append(div);
     div.addEventListener("mouseover", function () {
-      div.style.backgroundColor = "#333";
+      div.style.backgroundColor = colour;
     });
   }
 }
@@ -26,12 +28,19 @@ function clearSquares() {
   }
 }
 
-createSquares(16);
+createSquares(squares);
 
 // Let user select box size
 btnSize.addEventListener("click", function (event) {
   event.preventDefault();
-  let squares = document.querySelector("input[name=csize]:checked").value;
+  squares = document.querySelector("input[name=csize]:checked").value;
   clearSquares();
   createSquares(squares);
+});
+
+// Let user change colour
+btnColour.addEventListener("click", function (event) {
+  event.preventDefault();
+  colour = document.querySelector("input[name=ccolour]:checked").value;
+  console.log(colour);
 });
