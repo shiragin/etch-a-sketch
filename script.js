@@ -16,7 +16,7 @@ function createSquares(squares) {
     div.style.width = `${700 / squares}px`;
     div.style.height = `${700 / squares}px`;
     container.append(div);
-    div.addEventListener("mouseover", function () {
+    div.addEventListener("click", function () {
       div.style.backgroundColor = colour;
     });
   }

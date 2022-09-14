@@ -21,6 +21,9 @@
         <h2 class="control-title">Choose size:</h2>
         <form class="control-form">
           <div class="control-choice">
+            <input type="radio" name="csize" value="8"> 8 x 8
+          </div>
+          <div class="control-choice">
             <input type="radio" name="csize" value="16" checked="checked"> 16 x 16
           </div>
           <div class="control-choice">
@@ -29,15 +32,22 @@
           <div class="control-choice">
             <input type="radio" name="csize" value="64"> 64 x 64
           </div>
-          <div class="control-choice">
+          <div class="control-choice-btn">
             <button class="btn btn-size">Clicky-click</button>
           </div>
         </form>
-
       </div>
+
+      <div class="new-canvas">
+        <button class="btn btn-big">Start all over</button>
+      </div>
+
       <div class="colour">
         <h2 class="control-title">Choose colour:</h2>
         <form class="control-form">
+          <div class="control-choice">
+            <input type="radio" name="ccolour" value="black" checked="checked"> Black
+          </div>
           <div class="control-choice">
             <input type="radio" name="ccolour" value="red" checked="checked"> Red
           </div>
@@ -51,6 +61,9 @@
             <input type="radio" name="ccolour" value="yellow"> Yellow
           </div>
           <div class="control-choice">
+            <input type="radio" name="ccolour" value="white"> White
+          </div>
+          <div class="control-choice-btn">
             <button class="btn btn-colour">Click-clicky</button>
           </div>
         </form>
