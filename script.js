@@ -2,20 +2,19 @@
 
 // Variables
 const container = document.querySelector(".container");
-
 const radioSize = document.querySelectorAll("input[name=csize]");
 const radioColour = document.querySelectorAll("input[name='ccolour']");
+const btnNew = document.querySelector(".new-canvas");
 
-// const btnSize = document.querySelector(".btn-size");
-const btnColour = document.querySelector(".btn-colour");
-const btnNew = document.querySelector(".btn-new");
-
-const width = container.offsetWidth - 1;
-const height = container.offsetHeight - 1;
+const width = container.offsetWidth - 2;
+const height = width;
+container.style.width = `${width}px`;
+container.style.height = `${height}px`;
+// console.log(width, height);
+// console.log(container.style.width, container.style.height);
 
 let squares = 16;
 let colour = document.querySelector("input[name=ccolour]:checked").value;
-console.log(radioSize, radioColour, colour);
 
 // Creating divs inside the container box & hover effect
 function createSquares(squares) {

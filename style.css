@@ -11,7 +11,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: "Open Sans", sans-serif;
+}
+
+.i {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
 }
 
 .title {
@@ -78,9 +86,9 @@
 }
 
 .control-title {
-  font-size: 26px;
+  /* font-size: 26px; */
   margin-bottom: 10px;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .control-choice {
@@ -135,19 +143,24 @@ input[type="radio"]:checked::before {
 } */
 
 .btn {
-  background-color: #3ed13145;
+  /* background-color: #3ed13145; */
   padding: 5px 10px;
   margin-top: 5px;
-  border: 0.5px #999 solid;
+  /* border: 0px #999 solid; */
   cursor: pointer;
   font-weight: 500;
   /* transform: rotate(-10deg); */
 }
 
+.new-canvas:hover {
+  transition: 50ms;
+  color: #3fd131;
+}
+
 .btn:hover {
   /* background-color: #aaa; */
-  transition: 600ms ease-in-out;
-  transform: rotate(-360deg);
+  transition: 200ms ease-in-out;
+  transform: scale(1.2);
 }
 
 .btn-new {
@@ -165,24 +178,77 @@ Smartphones & small tablets */
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    width: 100%;
+  }
+
+  .container {
+    width: 70%;
   }
 
   .controls {
+    margin-top: 20px;
     flex-direction: column;
-    width: 650px;
-    height: 200px;
+    width: 70%;
+    height: 100px;
     justify-content: space-between;
   }
 
   .size,
   .colour,
   .new-canvas {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .control-title {
+    align-self: flex-start;
+    margin-right: 5px;
   }
 
   .control-form {
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .control-choice {
+    margin: 5px 15px 5px 15px;
+  }
+
+  .btn-new {
+    transform: tr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 26px;
+  }
+  .container {
+    width: 300px;
+  }
+  .controls {
+    width: 250px;
+    justify-content: space-around;
+  }
+  .control-title {
+    font-size: 16px;
+  }
+  .control-choice {
+    font-size: 10px;
+  }
+
+  .colour .control-choice {
+    padding-left: 20px;
+  }
+  .btn-new {
+    font-size: 16px;
+    width: 80px;
+    padding: 5px;
+    margin-left: 20px;
   }
 }

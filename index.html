@@ -6,8 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shira's Etch-a-Sketch</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,7 +21,9 @@
 
     <div class="controls">
       <div class="size">
-        <h2 class="control-title">Size</h2>
+        <div class="control-title">
+          <i class="fas fa-solid fa-maximize fa-3x"></i>
+        </div>
         <form class="control-form">
           <div class="control-choice">
             <input type="radio" name="csize" value="8"> 8 x 8
@@ -38,12 +43,11 @@
         </form>
       </div>
 
-      <div class="new-canvas">
-        <button class="btn btn-new">Start all over</button>
-      </div>
-
       <div class="colour">
-        <h2 class="control-title">Colour</h2>
+        <!-- <h2 class="control-title">Colour</h2> -->
+        <div class="control-title">
+          <i class="fas fa-regular fa-palette fa-3x"></i>
+        </div>
         <form class="control-form">
           <div class="control-choice">
             <input type="radio" name="ccolour" value="black" checked="checked"> Black
@@ -63,16 +67,18 @@
           <div class="control-choice">
             <input type="radio" name="ccolour" value="white"> White
           </div>
-          <!-- <div class="control-choice-btn">
-            <button class="btn btn-colour">Click-clicky</button>
-          </div> -->
+
         </form>
+      </div>
+      <div class="new-canvas">
+        <i class="fas fa-solid fa-eraser fa-3x"></i>
       </div>
 
     </div>
     <div class="container">
     </div>
   </main>
+
 </body>
 
 </html>
