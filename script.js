@@ -2,6 +2,7 @@
 
 // Variables
 const container = document.querySelector(".container");
+const radioSize = document.querySelectorAll("input[name=csize]");
 const btnSize = document.querySelector(".btn-size");
 const btnColour = document.querySelector(".btn-colour");
 const btnNew = document.querySelector(".btn-new");
@@ -34,18 +35,22 @@ function clearSquares() {
 
 createSquares(squares);
 
-// Let user select box size
-btnSize.addEventListener("click", function (event) {
-  event.preventDefault();
-  squares = document.querySelector("input[name=csize]:checked").value;
-  clearSquares();
-  createSquares(squares);
-});
+// // Let user select box size by button
+// btnSize.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   squares = document.querySelector("input[name=csize]:checked").value;
+//   clearSquares();
+//   createSquares(squares);
+// });
 
-// Reset the canvas
-btnNew.addEventListener("click", function () {
-  clearSquares();
-  createSquares(squares);
+// Let user select box size by radio click
+radioSize.forEach((item) => {
+  addEventListener("click", function (event) {
+    // event.preventDefault();
+    squares = document.querySelector("input[name=csize]:checked").value;
+    clearSquares();
+    createSquares(squares);
+  });
 });
 
 // Let user change colour
@@ -53,4 +58,10 @@ btnColour.addEventListener("click", function (event) {
   event.preventDefault();
   colour = document.querySelector("input[name=ccolour]:checked").value;
   console.log(colour);
+});
+
+// Reset the canvas
+btnNew.addEventListener("click", function () {
+  clearSquares();
+  createSquares(squares);
 });
