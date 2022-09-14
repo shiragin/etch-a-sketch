@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Combo&family=Open+Sans:wght@300;400&display=swap");
 
 :root {
-  --form-control-color: #3fd131;
+  --form-control-color: #32ac27;
 }
 
 *,
@@ -14,6 +14,8 @@
 }
 
 body {
+  background-color: #ddd;
+  /* background: url("img/steve-johnson-YS0YJLU_h2k-unsplash.jpeg"); */
   font-family: "Open Sans", sans-serif;
 }
 
@@ -37,6 +39,7 @@ body {
 }
 
 .container {
+  background-color: #fff;
   box-sizing: content-box;
   width: 650px;
   height: 650px;
@@ -46,7 +49,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 5px #3fd131;
+  box-shadow: 5px 5px #32ac27;
 }
 
 .square {
@@ -160,8 +163,10 @@ input[type="radio"]:checked::before {
 }
 
 .new-canvas:hover {
-  transition: 50ms;
-  color: #3fd131;
+  transition: 100ms;
+  color: #32ac27;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .btn:hover {
