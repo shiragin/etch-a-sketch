@@ -6,6 +6,9 @@ const btnSize = document.querySelector(".btn-size");
 const btnColour = document.querySelector(".btn-colour");
 const btnNew = document.querySelector(".btn-new");
 
+const width = container.offsetWidth - 1;
+const height = container.offsetHeight - 1;
+console.log(width, height);
 let squares = 16;
 let colour = "black";
 
@@ -14,8 +17,8 @@ function createSquares(squares) {
   for (let i = 0; i < squares * squares; i++) {
     let div = document.createElement("div");
     div.classList.add("square");
-    div.style.width = `${700 / squares}px`;
-    div.style.height = `${700 / squares}px`;
+    div.style.width = `${width / squares}px`;
+    div.style.height = `${height / squares}px`;
     container.append(div);
     div.addEventListener("click", function () {
       div.style.backgroundColor = colour;
