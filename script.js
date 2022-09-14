@@ -2,16 +2,19 @@
 
 // Variables
 const container = document.querySelector(".container");
+
 const radioSize = document.querySelectorAll("input[name=csize]");
-const btnSize = document.querySelector(".btn-size");
+const radioColour = document.querySelectorAll("input[name='ccolour']");
+
+// const btnSize = document.querySelector(".btn-size");
 const btnColour = document.querySelector(".btn-colour");
 const btnNew = document.querySelector(".btn-new");
 
 const width = container.offsetWidth - 1;
 const height = container.offsetHeight - 1;
-console.log(width, height);
 let squares = 16;
-let colour = "black";
+let colour = document.querySelector("input[name=ccolour]:checked").value;
+console.log(radioSize, radioColour, colour);
 
 // Creating divs inside the container box & hover effect
 function createSquares(squares) {
@@ -44,21 +47,47 @@ createSquares(squares);
 // });
 
 // Let user select box size by radio click
-radioSize.forEach((item) => {
-  addEventListener("click", function (event) {
-    // event.preventDefault();
-    squares = document.querySelector("input[name=csize]:checked").value;
+
+for (let i = 0; i < radioSize.length; i++) {
+  radioSize[i].addEventListener("click", function (event) {
+    squares = event.target.value;
     clearSquares();
     createSquares(squares);
   });
-});
+}
+
+// radioSize.forEach((item) => {
+//   addEventListener("click", function (event) {
+//     // event.preventDefault();
+//     console.log(event);
+//     squares = event.target.value;
+//     clearSquares();
+//     createSquares(squares);
+//   });
+// });
+
+// Let user change colour by button
+// btnColour.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   colour = document.querySelector("input[name=ccolour]:checked").value;
+//   console.log(colour);
+// });
 
 // Let user change colour
-btnColour.addEventListener("click", function (event) {
-  event.preventDefault();
-  colour = document.querySelector("input[name=ccolour]:checked").value;
-  console.log(colour);
-});
+
+for (let i = 0; i < radioColour.length; i++) {
+  radioColour[i].addEventListener("click", function (event) {
+    colour = event.target.value;
+  });
+}
+
+// radioColour.forEach((item) => {
+//   addEventListener("change", function (event) {
+//     event.preventDefault();
+//     colour = event.target.value;
+//     console.log(event);
+//   });
+// });
 
 // Reset the canvas
 btnNew.addEventListener("click", function () {
